@@ -153,7 +153,7 @@ fi
 dbg "chapters for extension enabled: $CHAPTER_SUPPORT_FOR_EXTENSION"
 
 
-if [ "$(printf "${CURRENT_SONG_DURATION}\n${ENABLE_CHAPTERS_MIN_DURATION}\n" | sort -g | head -1)" == "${ENABLE_CHAPTERS_MIN_DURATION}" ]; then
+if [ "$(printf "${CURRENT_SONG_DURATION}\n${ENABLE_CHAPTERS_MIN_DURATION}\n" | sort -g | head -n 1)" == "${ENABLE_CHAPTERS_MIN_DURATION}" ]; then
   CHAPTER_SUPPORT_FOR_DURATION="1"
 else
   CHAPTER_SUPPORT_FOR_DURATION="0"
